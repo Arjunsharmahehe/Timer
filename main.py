@@ -1,4 +1,4 @@
-from playsound import playsound
+#from playsound import playsound 
 import time
 
 CLEAR = '\033[2j'
@@ -16,5 +16,9 @@ def alarm(seconds):
     print(f"{CLEAR_AND_RETURN}{minutes:02d}:{Seconds:02d}")
   print("Time's up!!")
 
-alarm(10)
-playsound('Alarm_sound/cyber-alarms-synthesized-116358.mp3')
+if __name__ == "__main__":
+  minutes = int(input("Enter the number of minutes: "))
+  sec = int(input("Enter the number of seconds: "))
+  final_time = (minutes * 60) + sec
+  alarm(final_time)
+#playsound('Alarm_sound/cyber-alarms-synthesized-116358.mp3')
